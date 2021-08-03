@@ -11,6 +11,7 @@ fi
 
 if [ -f $FILE_DIR$MOBILE_SERVICE ]; then
 sudo mv $FILE_DIR$MOBILE_SERVICE 'ieep2-mobile-platform-service.jar'
+fi
 
 for i in `sudo docker service ls |grep mobile-platform |awk '{print $2}' | sort -r`;
 do
